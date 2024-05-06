@@ -43,7 +43,6 @@ jobs:
               with:
                 to: ${{ secrets.TELEGRAM_CHAT_ID }}
                 token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-                message: "A implantação da aplicação foi concluída com sucesso!"
 
             - name: Exibe msg de finalizacao
               run: echo "Finalizado com Sucesso :D"
