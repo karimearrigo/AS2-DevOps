@@ -41,14 +41,9 @@ jobs:
             - name: Notificacao Telegram
               uses: appleboy/telegram-action@master
               with:
-                to: ${{ secrets.TELEGRAM_CHATID}}
-                token: ${{ secrets.TELEGRAM_BOTTOKEN}}
-                message: |
-                 ${{ github.actor}} criou um commit e fez um push:
-                    Mensagem do commit: ${{ github.event.commits[0].message}}
-                    Repositório: ${{ github.repository}}
-
-                    Veja o que mudou em: https://github.com/${{ github.repository}}/commit/${{ github.sha}}
+                to: ${{ secrets.TELEGRAM_CHAT_ID }}
+                token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+                message: "A implantação da aplicação foi concluída com sucesso!"
 
             - name: Exibe msg de finalizacao
               run: echo "Finalizado com Sucesso :D"
